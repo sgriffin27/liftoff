@@ -12,6 +12,8 @@
 
 cd $SLURM_SUBMIT_DIR
 
-module spider Liftoff/1.6.3
-liftofftools all -r /home/seg75580/AfuGenomes/AF293_AspergillusFumagatis_GCF_000002655.1GCF_000002655.1_ASM265v1_genomic.fna -t /home/seg75580/AfuGenomes/GCF_000002655.1_ASM265v1_TR46.fasta /
--rg /home/seg75580/AfuGenomes/AF293_AspergillusFumagatis_GCF_000002655.1/GCF_000002655.1_ASM265v1_genomic.gff -tg /home/seg75580/AfuGenomes/GCF_000002655.1_ASM265v1_TR46.gff
+module load Liftoff/1.6.3
+module load minimap2/2.24-GCCcore-11.3.0
+liftoff -g /home/seg75580/AfuGenomes/AF293_AspergillusFumagatis_GCF_000002655.1GCF_000002655.1_ASM265v1_genomic.gff -f /scratch/seg75580/liftover/features.txt /home/seg75580/AfuGenomes/GCF_000002655.1_ASM265v1_TR46.gff /
+/home/seg75580/AfuGenomes/AF293_AspergillusFumagatis_GCF_000002655.1GCF_000002655.1_ASM265v1_genomic.fna -o /scratch/seg75580/liftoff/TR46_liftover.gff
+
