@@ -17,7 +17,10 @@ module load minimap2/2.24-GCCcore-11.3.0
 
 liftoff -g /home/seg75580/AfuGenomes/genomicver2.gff -f /scratch/seg75580/liftoff/features.txt /home/seg75580/AfuGenomes/GCF_000002655.1_ASM265v1_TR46.fasta /home/seg75580/AfuGenomes/GCF_000002655.1_ASM265v1_genomicver2.fasta -o /scratch/seg75580/liftoff/TR46_liftover.gff
 
+#to make gtf from the gff you just generated
+module load gffread/0.12.7-GCCcore-12.3.0
 
+gffread input.gff -T -o output.gtf
 
 
 
