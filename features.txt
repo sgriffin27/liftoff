@@ -1,0 +1,11 @@
+#list features you want to include in liftoff
+CDS
+gene
+transcript
+mRNA
+exon
+UTR
+misc_feature
+repeat_region
+intron
+extracted region
